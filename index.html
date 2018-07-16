@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Generated with Appizy at 2018-07-13 23:58 UTC -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Another web application created from a spreadsheet with Appizy">
+    <meta name="author" content="Appizy">
+    <title>
+      Appizy
+    </title>
+    <style type="text/css">
+    /* Normalize */
+
+    /* Appizy default CSS */
+    #appizy {
+    display: inline-block;
+    }
+
+    #appizy table {
+    table-layout: fixed;
+    border: none;
+    border-collapse: collapse;
+    }
+
+    #appizy tbody {
+    border: none;
+    }
+
+    #appizy tr {
+    font-size: 10pt;
+    font-family: Arial;
+    min-height: 10px;
+    }
+
+    #appizy td {
+    padding: 2px;
+    line-height: normal;
+    }
+
+    #appizy input {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 1px solid #C2C2C2;
+    border-radius: 2px;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    padding-right: 1%;
+    margin: 1%;
+    text-align: inherit;
+    vertical-align: text-bottom;
+    width: 97%;
+    }
+
+    #appizy input:disabled {
+    border: none !important;
+    color: inherit;
+    -webkit-opacity: 1;
+    -webkit-text-fill-color: inherit;
+    }
+
+    #appizy select {
+    width: 100%;
+    text-align: inherit;
+    }
+
+    #appizy p {
+    margin: 0;
+    }
+
+    .in {
+    text-align: right;
+    }
+
+    .out {
+    text-align: right;
+    padding: 5px;
+    }
+
+    .hidden-cell {
+    display: none;
+    }
+
+    .hidden-row {
+    display: none;
+    }
+
+    textarea {
+    width: 100%;
+    }
+
+    textarea:disabled {
+    background-color: white;
+    color : black;
+    }
+
+        .ce1 { 
+    background-color:transparent;
+    color:#000000;
+    font-family:Calibri;
+    font-size:11pt;
+    }
+    .ce2 { 
+    background-color:transparent;
+    color:#000000;
+    font-family:Calibri;
+    font-size:11pt;
+    font-weight:bold;
+    }
+    .ce3 { 
+    background-color:transparent;
+    color:#000000;
+    font-family:Calibri;
+    font-size:11pt;
+    }
+    .ce4 { 
+    background-color:transparent;
+    color:#000000;
+    font-family:Calibri;
+    font-size:11pt;
+    border-top:none;
+    border-bottom:thin solid #000000;
+    border-left:none;
+    border-right:none;
+    }
+    .ce5 { 
+    background-color:transparent;
+    color:#000000;
+    font-family:Calibri;
+    font-size:11pt;
+    border-top:thin solid #000000;
+    border-bottom:thin solid #000000;
+    border-left:none;
+    border-right:none;
+    }
+    .ce6 { 
+    background-color:transparent;
+    color:#000000;
+    font-family:Calibri;
+    font-size:11pt;
+    text-align:center;
+    font-weight:bold;
+    }
+    .ce7 { 
+    background-color:transparent;
+    color:#000000;
+    font-family:Calibri;
+    font-size:11pt;
+    }
+    .ce8 { 
+    background-color:#DDEBF7;
+    color:#000000;
+    font-family:Calibri;
+    font-size:11pt;
+    font-weight:bold;
+    }
+    .ce9 { 
+    background-color:#DDEBF7;
+    color:#000000;
+    font-family:Calibri;
+    font-size:11pt;
+    }
+    .ce10 { 
+    background-color:#DDEBF7;
+    color:#000000;
+    font-family:Calibri;
+    font-size:11pt;
+    }
+    .ce11 { 
+    background-color:#9BC2E6;
+    color:#000000;
+    font-family:Calibri;
+    font-size:11pt;
+    text-align:center;
+    font-weight:bold;
+    }
+    .ce12 { 
+    background-color:#FFFFFF;
+    color:#000000;
+    font-family:Calibri;
+    font-size:11pt;
+    }
+    .t1 { 
+    background-color:transparent;
+    color:#000000;
+    font-family:Calibri;
+    font-size:11pt;
+    font-style:italic;
+    font-weight:bold;
+    }
+    .co1 { 
+    width:3.70416666666667cm;
+    }
+    .co2 { 
+    width:2.72520833333333cm;
+    }
+    .co3 { 
+    width:3.99520833333333cm;
+    }
+    .co4 { 
+    width:6.72041666666667cm;
+    }
+    .co5 { 
+    width:1.69333333333333cm;
+    }
+    .co6 { 
+    width:5.3975cm;
+    }
+    .co7 { 
+    width:1.61395833333333cm;
+    }
+    .co8 { 
+    width:3.06916666666667cm;
+    }
+    .co9 { 
+    width:2.143125cm;
+    }
+    .co10 { 
+    width:4.97416666666667cm;
+    }
+    .co11 { 
+    width:5.23875cm;
+    }
+    .co12 { 
+    width:5.10645833333333cm;
+    }
+    .co13 { 
+    width:5.13291666666667cm;
+    }
+    .co14 { 
+    width:5.34458333333333cm;
+    }
+    .co15 { 
+    width:3.59833333333333cm;
+    }
+    .co16 { 
+    width:3.65125cm;
+    }
+    .co17 { 
+    width:8.175625cm;
+    }
+    .co18 { 
+    width:4.73604166666667cm;
+    }
+    .co19 { 
+    width:7.858125cm;
+    }
+    .co20 { 
+    width:3.36020833333333cm;
+    }
+    .ro1 { 
+    height:15pt;
+    }
+    .ro2 { 
+    height:15pt;
+    }
+    .ro3 { 
+    height:15.75pt;
+    }
+    .ta2 { 
+    display:none;
+    }
+    .heading { 
+    background-color:transparent;
+    text-align:center;
+    font-size:16pt;
+    font-style:italic;
+    font-weight:bold;
+    }
+    .heading1 { 
+    background-color:transparent;
+    text-align:center;
+    font-size:16pt;
+    font-style:italic;
+    font-weight:bold;
+    }
+    .default { 
+    background-color:transparent;
+    color:#000000;
+    font-family:Calibri;
+    font-size:11pt;
+    }
+    .result { 
+    background-color:transparent;
+    font-style:italic;
+    text-decoration:underline;
+    font-weight:bold;
+    }
+    .result2 { 
+    background-color:transparent;
+    font-style:italic;
+    text-decoration:underline;
+    font-weight:bold;
+    }
+
+
+                .tabs-list {
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    }
+
+    .tabs-list li {
+    height: 30px;
+    line-height: 30px;
+    list-style: none;
+    float: left;
+    background-color: #ccc;
+    border-top: 1px solid #d4d4d1;
+    border-right: 1px solid #d4d4d1;
+    border-left: 1px solid #d4d4d1;
+    margin-right: 5px;
+    }
+
+    .tabs-list li.active {
+    position: relative;
+    background-color: #fff;
+    border-bottom: 1px solid #fff;
+    z-index: 5;
+    }
+
+    .tabs-list li a {
+    padding: 10px;
+    color: #595959;
+    text-decoration: none;
+    }
+
+    .tabs-list .active a {
+    color: #000;
+    }
+
+    .tabs {
+    border: 1px solid #d4d4d1;
+    background-color: #fff;
+    margin-bottom: 20px;
+    }
+
+    .tab-content {
+    padding: 10px;
+    display: none;
+    }
+
+    .tab-content.active {
+    display: block;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="appizy">
+      <form>
+        <div>
+          <ul class="tabs-list">
+            <li class="active">
+              <a href="#sheet1">Inferno_Calculator</a>
+            </li>
+          </ul>
+        </div>
+        <div class="tabs">
+          <div id="sheet1" class="tab-content active">
+            <table>
+              <tr class="s0r0 ro1">
+                <td class="s0r0c0 text ce11" colspan="5">
+                  <p>
+                    Inferno Calculator
+                  </p>
+                </td>
+              </tr>
+              <tr class="s0r1 ro1">
+                <td class="s0r1c0 text ce8">
+                  <p>
+                    Defence Level<span class="t1">(1-99)</span>
+                  </p>
+                </td>
+                <td class="s0r1c1 in ce12">
+                  <input id="s0r1c1" name="s0r1c1" data-value="1" data-value-type="float" value="1">
+                </td>
+                <td class="s0r1c2 text ce8">
+                  <p>
+                    Range Top and Bottom
+                  </p>
+                </td>
+                <td class="s0r1c3 in ce9">
+                  <select id="s0r1c3" name="s0r1c3">
+                    <option value="Arma">
+                      Arma
+                    </option>
+                    <option value="Karils">
+                      Karils
+                    </option>
+                    <option value="3rd Age Range">
+                      3rd Age Range
+                    </option>
+                    <option value="Blessed">
+                      Blessed
+                    </option>
+                    <option selected value="1 Def Gear">
+                      1 Def Gear
+                    </option>
+                  </select>
+                </td>
+                <td class="s0r1c4 text ce9"></td>
+              </tr>
+              <tr class="s0r2 ro1">
+                <td class="s0r2c0 text ce8">
+                  <p>
+                    Range Level<span class="t1">(75+)</span>
+                  </p>
+                </td>
+                <td class="s0r2c1 in ce12">
+                  <input id="s0r2c1" name="s0r2c1" data-value="99" data-value-type="float" value="99">
+                </td>
+                <td class="s0r2c2 text ce8">
+                  <p>
+                    Mage Top and Bottom
+                  </p>
+                </td>
+                <td class="s0r2c3 in ce9">
+                  <select id="s0r2c3" name="s0r2c3">
+                    <option value="Ancestral">
+                      Ancestral
+                    </option>
+                    <option value="Ahrims">
+                      Ahrims
+                    </option>
+                    <option value="3rd Age Mage">
+                      3rd Age Mage
+                    </option>
+                    <option value="Infinity">
+                      Infinity
+                    </option>
+                    <option selected value="1 Def Gear">
+                      1 Def Gear
+                    </option>
+                  </select>
+                </td>
+                <td class="s0r2c4 text ce9"></td>
+              </tr>
+              <tr class="s0r3 ro1">
+                <td class="s0r3c0 text ce8">
+                  <p>
+                    Hitpoints Level<span class="t1">(75+)</span>
+                  </p>
+                </td>
+                <td class="s0r3c1 in ce12">
+                  <input id="s0r3c1" name="s0r3c1" data-value="99" data-value-type="float" value="99">
+                </td>
+                <td class="s0r3c2 text ce8">
+                  <p>
+                    Shield
+                  </p>
+                </td>
+                <td class="s0r3c3 in ce9">
+                  <select id="s0r3c3" name="s0r3c3">
+                    <option value="Ely (Twisted Bow)">
+                      Ely (Twisted Bow)
+                    </option>
+                    <option value="Arcane (Twisted Bow)">
+                      Arcane (Twisted Bow)
+                    </option>
+                    <option value="Dragonfire Ward (ACB)">
+                      Dragonfire Ward (ACB)
+                    </option>
+                    <option value="Odium Ward (ACB)">
+                      Odium Ward (ACB)
+                    </option>
+                    <option value="Blessed Spirit Shield (Twisted Bow)">
+                      Blessed Spirit Shield (Twisted Bow)
+                    </option>
+                    <option selected value="Unholy Book (ACB)">
+                      Unholy Book (ACB)
+                    </option>
+                    <option value="Mages Book (Twisted Bow)">
+                      Mages Book (Twisted Bow)
+                    </option>
+                    <option value="Book of Darkness (Twisted Bow)">
+                      Book of Darkness (Twisted Bow)
+                    </option>
+                  </select>
+                </td>
+                <td class="s0r3c4 text ce9"></td>
+              </tr>
+              <tr class="s0r4 ro1">
+                <td class="s0r4c0 text ce8">
+                  <p>
+                    Magic Level<span class="t1">(94+)</span>
+                  </p>
+                </td>
+                <td class="s0r4c1 in ce12">
+                  <input id="s0r4c1" name="s0r4c1" data-value="99" data-value-type="float" value="99">
+                </td>
+                <td class="s0r4c2 text ce8">
+                  <p>
+                    Boots
+                  </p>
+                </td>
+                <td class="s0r4c3 in ce9">
+                  <select id="s0r4c3" name="s0r4c3">
+                    <option value="Pegasian">
+                      Pegasian
+                    </option>
+                    <option selected value="Ranger">
+                      Ranger
+                    </option>
+                    <option value="Blessed">
+                      Blessed
+                    </option>
+                  </select>
+                </td>
+                <td class="s0r4c4 text ce9"></td>
+              </tr>
+              <tr class="s0r5 ro1">
+                <td class="s0r5c0 text ce8">
+                  <p>
+                    Sgs
+                  </p>
+                </td>
+                <td class="s0r5c1 in ce9">
+                  <select id="s0r5c1" name="s0r5c1">
+                    <option value="yes">
+                      yes
+                    </option>
+                    <option selected value="no">
+                      no
+                    </option>
+                  </select>
+                </td>
+                <td class="s0r5c2 text ce8">
+                  <p>
+                    BP Ammo
+                  </p>
+                </td>
+                <td class="s0r5c3 in ce9">
+                  <select id="s0r5c3" name="s0r5c3">
+                    <option selected value="Dragon">
+                      Dragon
+                    </option>
+                    <option value="Rune (Iron Man)">
+                      Rune (Iron Man)
+                    </option>
+                    <option value="Adamant (Iron Man)">
+                      Adamant (Iron Man)
+                    </option>
+                  </select>
+                </td>
+                <td class="s0r5c4 text ce9"></td>
+              </tr>
+              <tr class="s0r6 ro1">
+                <td class="s0r6c0 text ce8">
+                  <p>
+                    Bow
+                  </p>
+                </td>
+                <td class="s0r6c1 in ce9">
+                  <select id="s0r6c1" name="s0r6c1">
+                    <option selected value="T bow">
+                      T bow
+                    </option>
+                    <option value="ACB">
+                      ACB
+                    </option>
+                    <option value="Rune Cbow">
+                      Rune Cbow
+                    </option>
+                  </select>
+                </td>
+                <td class="s0r6c2 text ce8">
+                  <p>
+                    Geographical Location
+                  </p>
+                </td>
+                <td class="s0r6c3 in ce9">
+                  <select id="s0r6c3" name="s0r6c3">
+                    <option selected value="USA">
+                      USA
+                    </option>
+                    <option value="EU">
+                      EU
+                    </option>
+                    <option value="AUS / NZ">
+                      AUS / NZ
+                    </option>
+                    <option value="Other">
+                      Other
+                    </option>
+                  </select>
+                </td>
+                <td class="s0r6c4 text ce9"></td>
+              </tr>
+              <tr class="s0r7 ro1">
+                <td class="s0r7c0 text ce8">
+                  <p>
+                    Wand
+                  </p>
+                </td>
+                <td class="s0r7c1 in ce9">
+                  <select id="s0r7c1" name="s0r7c1">
+                    <option selected value="Kodai">
+                      Kodai
+                    </option>
+                    <option value="Master">
+                      Master
+                    </option>
+                    <option value="Ancient">
+                      Ancient
+                    </option>
+                  </select>
+                </td>
+                <td class="s0r7c2 text ce8">
+                  <p>
+                    Internet Upload Speed
+                  </p>
+                </td>
+                <td class="s0r7c3 in ce9">
+                  <select id="s0r7c3" name="s0r7c3">
+                    <option value="5 to 9">
+                      5 to 9
+                    </option>
+                    <option value="10 to 14">
+                      10 to 14
+                    </option>
+                    <option value="15 to 20">
+                      15 to 20
+                    </option>
+                    <option selected value="21 to 30">
+                      21 to 30
+                    </option>
+                    <option value="31 +">
+                      31 +
+                    </option>
+                  </select>
+                </td>
+                <td class="s0r7c4 text ce9">
+                  <p>
+                    MBPS
+                  </p>
+                </td>
+              </tr>
+              <tr class="s0r8 ro1">
+                <td class="s0r8c0 text ce8">
+                  <p>
+                    Highest Range Prayer
+                  </p>
+                </td>
+                <td class="s0r8c1 in ce9">
+                  <select id="s0r8c1" name="s0r8c1">
+                    <option value="Rigour">
+                      Rigour
+                    </option>
+                    <option selected value="Eagle Eye">
+                      Eagle Eye
+                    </option>
+                  </select>
+                </td>
+                <td class="s0r8c2 text ce8"></td>
+                <td class="s0r8c3 text ce9">
+                  <p>
+                    USA Min req = 5 (Higher the better)
+                  </p>
+                </td>
+                <td class="s0r8c4 text ce9"></td>
+              </tr>
+              <tr class="s0r9 ro1">
+                <td class="s0r9c0 text ce8">
+                  <p>
+                    Necklace
+                  </p>
+                </td>
+                <td class="s0r9c1 in ce9">
+                  <select id="s0r9c1" name="s0r9c1">
+                    <option value="Anguish/Occult">
+                      Anguish/Occult
+                    </option>
+                    <option selected value="Fury (Iron man)">
+                      Fury (Iron man)
+                    </option>
+                  </select>
+                </td>
+                <td class="s0r9c2 text ce8"></td>
+                <td class="s0r9c3 text ce10">
+                  <p>
+                    EU Min req = 15 (Higher the better)
+                  </p>
+                </td>
+                <td class="s0r9c4 text ce9"></td>
+              </tr>
+              <tr class="s0r10 ro1">
+                <td class="s0r10c0 text ce8"></td>
+                <td class="s0r10c1 text ce9"></td>
+                <td class="s0r10c2 text ce8"></td>
+                <td class="s0r10c3 text ce9">
+                  <p>
+                    AUS Min req = 21 (Higher the better)
+                  </p>
+                </td>
+                <td class="s0r10c4 text ce9"></td>
+              </tr>
+              <tr class="s0r11 ro1">
+                <td class="s0r11c0 text ce8">
+                  <p>
+                    Total Price
+                  </p>
+                </td>
+                <td class="s0r11c1 out ce9">
+                  <input disabled="disabled" name="s0r11c1" value="871.2" data-value="871.2" data-value-type="float">
+                </td>
+                <td class="s0r11c2 text ce8">
+                  <p>
+                    Mil
+                  </p>
+                </td>
+                <td class="s0r11c3 text ce9">
+                  <p>
+                    Other Min req = 31+ (Higher the better)
+                  </p>
+                </td>
+                <td class="s0r11c4 text ce9"></td>
+              </tr>
+              <tr class="s0r12 ro1">
+                <td class="s0r12c0 text ce9"></td>
+                <td class="s0r12c1 out ce9">
+                  <input disabled="disabled" name="s0r12c1" value="653.40000000000009" data-value="653.40000000000009" data-value-type="float">
+                </td>
+                <td class="s0r12c2 text ce8">
+                  <p>
+                    USD
+                  </p>
+                </td>
+                <td class="s0r12c3 text ce9"></td>
+                <td class="s0r12c4 text ce9"></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </form>
+    </div><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" type="text/javascript">
+</script><!-- Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/numeric/1.2.6/numeric.min.js" type="text/javascript">
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/1.5.3/numeral.min.js" type="text/javascript">
+</script><script src="https://cdn.jsdelivr.net/jstat/1.5.3/jstat.min.js" type="text/javascript">
+</script><script type="text/javascript">
+    jStat.jStat = jStat;
+    </script><script src="https://cdnjs.cloudflare.com/ajax/libs/formulajs/1.0.8/formula.js" type="text/javascript">
+</script><!-- Spreadsheet calculations -->
+    <script type="application/javascript">
+                        window.APY = window.APY || {};
+            window.APY.cells ={};
+                            // Hidden tab 'Calculation'
+    APY.cells.s1r1c1 = { value: 1, type: 'float' };APY.cells.s1r1c3 = { value: '1 Def Gear', type: 'string' };APY.cells.s1r2c1 = { value: 99, type: 'float' };APY.cells.s1r2c3 = { value: '1 Def Gear', type: 'string' };APY.cells.s1r3c1 = { value: 99, type: 'float' };APY.cells.s1r3c3 = { value: 'Unholy Book (ACB)', type: 'string' };APY.cells.s1r4c1 = { value: 99, type: 'float' };APY.cells.s1r4c3 = { value: 'Ranger', type: 'string' };APY.cells.s1r5c1 = { value: 'no', type: 'string' };APY.cells.s1r5c3 = { value: 'Dragon', type: 'string' };APY.cells.s1r6c1 = { value: 'T bow', type: 'string' };APY.cells.s1r6c3 = { value: 'USA', type: 'string' };APY.cells.s1r7c1 = { value: 'Kodai', type: 'string' };APY.cells.s1r7c3 = { value: '21 to 30', type: 'string' };APY.cells.s1r8c1 = { value: 'Eagle Eye', type: 'string' };APY.cells.s1r9c1 = { value: 'Fury (Iron man)', type: 'string' };APY.cells.s1r11c1 = { value: 871.2, type: 'float' };APY.cells.s1r12c1 = { value: 653.40000000000009, type: 'float' };APY.cells.s1r16c0 = { value: 600, type: 'float' };APY.cells.s1r16c1 = { value: 0, type: 'float' };APY.cells.s1r16c2 = { value: 0, type: 'float' };APY.cells.s1r16c3 = { value: 0, type: 'float' };APY.cells.s1r16c4 = { value: 0, type: 'float' };APY.cells.s1r16c5 = { value: 660, type: 'float' };APY.cells.s1r16c6 = { value: 660, type: 'float' };APY.cells.s1r16c7 = { value: 0, type: 'float' };APY.cells.s1r16c8 = { value: 0, type: 'float' };APY.cells.s1r16c9 = { value: 0, type: 'float' };APY.cells.s1r16c10 = { value: 0, type: 'float' };APY.cells.s1r16c11 = { value: 0, type: 'float' };APY.cells.s1r16c12 = { value: 0, type: 'float' };APY.cells.s1r16c13 = { value: 871.2, type: 'float' };APY.cells.s1r16c14 = { value: 871.2, type: 'float' };APY.cells.s1r16c15 = { value: 0, type: 'float' };APY.cells.s1r17c0 = { value: 0, type: 'float' };APY.cells.s1r17c1 = { value: 0, type: 'float' };APY.cells.s1r17c2 = { value: 0, type: 'float' };APY.cells.s1r17c3 = { value: 0, type: 'float' };APY.cells.s1r17c4 = { value: 660, type: 'float' };APY.cells.s1r17c5 = { value: 0, type: 'float' };APY.cells.s1r17c6 = { value: 0, type: 'float' };APY.cells.s1r17c7 = { value: 792, type: 'float' };APY.cells.s1r17c8 = { value: 871.2, type: 'float' };APY.cells.s1r17c9 = { value: 0, type: 'float' };APY.cells.s1r17c10 = { value: 0, type: 'float' };APY.cells.s1r17c11 = { value: 0, type: 'float' };APY.cells.s1r17c12 = { value: 871.2, type: 'float' };APY.cells.s1r17c13 = { value: 0, type: 'float' };APY.cells.s1r17c14 = { value: 0, type: 'float' };APY.cells.s1r17c15 = { value: 0, type: 'float' };APY.cells.s1r18c0 = { value: 0, type: 'float' };APY.cells.s1r18c1 = { value: 0, type: 'float' };APY.cells.s1r18c2 = { value: 0, type: 'float' };APY.cells.s1r18c3 = { value: 600, type: 'float' };APY.cells.s1r18c4 = { value: 660, type: 'float' };APY.cells.s1r18c5 = { value: 0, type: 'float' };APY.cells.s1r18c6 = { value: 0, type: 'float' };APY.cells.s1r18c7 = { value: 792, type: 'float' };APY.cells.s1r18c8 = { value: 871.2, type: 'float' };APY.cells.s1r18c9 = { value: 0, type: 'float' };APY.cells.s1r18c10 = { value: 0, type: 'float' };APY.cells.s1r18c11 = { value: 0, type: 'float' };APY.cells.s1r18c12 = { value: 0, type: 'float' };APY.cells.s1r18c13 = { value: 0, type: 'float' };APY.cells.s1r18c14 = { value: 0, type: 'float' };APY.cells.s1r18c15 = { value: 0, type: 'float' };APY.cells.s1r19c0 = { value: 0, type: 'float' };APY.cells.s1r19c1 = { value: 0, type: 'float' };APY.cells.s1r19c2 = { value: 0, type: 'float' };APY.cells.s1r19c3 = { value: 600, type: 'float' };APY.cells.s1r19c5 = { value: 660, type: 'float' };APY.cells.s1r19c6 = { value: 660, type: 'float' };APY.cells.s1r19c9 = { value: 0, type: 'float' };APY.cells.s1r19c10 = { value: 0, type: 'float' };APY.cells.s1r19c11 = { value: 0, type: 'float' };APY.cells.s1r19c12 = { value: 0, type: 'float' };APY.cells.s1r19c13 = { value: 871.2, type: 'float' };APY.cells.s1r19c14 = { value: 0, type: 'float' };APY.cells.s1r19c15 = { value: 871.2, type: 'float' };APY.cells.s1r20c0 = { value: 600, type: 'float' };APY.cells.s1r20c1 = { value: 0, type: 'float' };APY.cells.s1r20c2 = { value: 0, type: 'float' };APY.cells.s1r20c9 = { value: 0, type: 'float' };APY.cells.s1r20c10 = { value: 0, type: 'float' };APY.cells.s1r20c11 = { value: 0, type: 'float' };APY.cells.s1r20c12 = { value: 0, type: 'float' };APY.cells.s1r20c14 = { value: 871.2, type: 'float' };APY.cells.s1r20c15 = { value: 0, type: 'float' };APY.cells.s1r21c1 = { value: 600, type: 'float' };APY.cells.s1r21c2 = { value: 600, type: 'float' };APY.cells.s1r21c9 = { value: 0, type: 'float' };APY.cells.s1r21c10 = { value: 0, type: 'float' };APY.cells.s1r21c11 = { value: 0, type: 'float' };APY.cells.s1r21c12 = { value: 871.2, type: 'float' };APY.cells.s1r21c15 = { value: 0, type: 'float' };APY.cells.s1r22c1 = { value: 600, type: 'float' };APY.cells.s1r22c2 = { value: 600, type: 'float' };APY.cells.s1r22c9 = { value: 0, type: 'float' };APY.cells.s1r22c10 = { value: 0, type: 'float' };APY.cells.s1r22c11 = { value: 0, type: 'float' };APY.cells.s1r22c15 = { value: 0, type: 'float' };APY.cells.s1r23c9 = { value: 0, type: 'float' };APY.cells.s1r23c10 = { value: 0, type: 'float' };APY.cells.s1r23c11 = { value: 0, type: 'float' };APY.cells.s1r23c15 = { value: 0, type: 'float' };APY.cells.s1r24c9 = { value: 871.2, type: 'float' };APY.cells.s1r24c10 = { value: 871.2, type: 'float' };APY.cells.s1r24c11 = { value: 0, type: 'float' };APY.cells.s1r24c15 = { value: 0, type: 'float' };APY.cells.s1r25c9 = { value: 0, type: 'float' };APY.cells.s1r25c10 = { value: 0, type: 'float' };APY.cells.s1r25c11 = { value: 871.2, type: 'float' };APY.cells.s1r25c15 = { value: 0, type: 'float' };APY.cells.s1r26c9 = { value: 871.2, type: 'float' };APY.cells.s1r26c10 = { value: 871.2, type: 'float' };APY.cells.s1r26c11 = { value: 0, type: 'float' };APY.cells.s1r26c15 = { value: 0, type: 'float' };APY.cells.s1r27c11 = { value: 871.2, type: 'float' };APY.cells.s1r27c15 = { value: 0, type: 'float' };APY.cells.s1r28c15 = { value: 0, type: 'float' };APY.cells.s1r29c15 = { value: 0, type: 'float' };APY.cells.s1r30c15 = { value: 0, type: 'float' };APY.cells.s1r31c15 = { value: 0, type: 'float' };APY.cells.s1r32c15 = { value: 0, type: 'float' };APY.cells.s1r33c15 = { value: 0, type: 'float' };APY.cells.s1r34c15 = { value: 0, type: 'float' };APY.cells.s1r35c15 = { value: 0, type: 'float' };APY.cells.s1r36c15 = { value: 871.2, type: 'float' };                            // Hidden tab 'List_Values'
+                    
+        (function ($, Formula) {
+            window.APY = window.APY || {};
+    APY.formulas = {};
+    APY.formulas.s0r11c1 = function() { APY.set('s0r11c1',RANGE([1,36,15])) }
+    APY.formulas.s0r12c1 = function() { APY.set('s0r12c1',RANGE([0,11,1])*0.75) }
+    APY.formulas.s1r1c1 = function() { APY.set('s1r1c1',RANGE([0,1,1])) }
+    APY.formulas.s1r1c3 = function() { APY.set('s1r1c3',RANGE([0,1,3])) }
+    APY.formulas.s1r2c1 = function() { APY.set('s1r2c1',RANGE([0,2,1])) }
+    APY.formulas.s1r2c3 = function() { APY.set('s1r2c3',RANGE([0,2,3])) }
+    APY.formulas.s1r3c1 = function() { APY.set('s1r3c1',RANGE([0,3,1])) }
+    APY.formulas.s1r3c3 = function() { APY.set('s1r3c3',RANGE([0,3,3])) }
+    APY.formulas.s1r4c1 = function() { APY.set('s1r4c1',RANGE([0,4,1])) }
+    APY.formulas.s1r4c3 = function() { APY.set('s1r4c3',RANGE([0,4,3])) }
+    APY.formulas.s1r5c1 = function() { APY.set('s1r5c1',RANGE([0,5,1])) }
+    APY.formulas.s1r5c3 = function() { APY.set('s1r5c3',RANGE([0,5,3])) }
+    APY.formulas.s1r6c1 = function() { APY.set('s1r6c1',RANGE([0,6,1])) }
+    APY.formulas.s1r6c3 = function() { APY.set('s1r6c3',RANGE([0,6,3])) }
+    APY.formulas.s1r7c1 = function() { APY.set('s1r7c1',RANGE([0,7,1])) }
+    APY.formulas.s1r7c3 = function() { APY.set('s1r7c3',RANGE([0,7,3])) }
+    APY.formulas.s1r8c1 = function() { APY.set('s1r8c1',RANGE([0,8,1])) }
+    APY.formulas.s1r9c1 = function() { APY.set('s1r9c1',RANGE([0,9,1])) }
+    APY.formulas.s1r11c1 = function() { APY.set('s1r11c1',RANGE([1,36,15])) }
+    APY.formulas.s1r12c1 = function() { APY.set('s1r12c1',RANGE([1,11,1])*0.75) }
+    APY.formulas.s1r16c0 = function() { APY.set('s1r16c0',Formula.IF(Formula.AND(RANGE([1,1,1])>=1,RANGE([1,1,1])<=39),600,0)) }
+    APY.formulas.s1r16c1 = function() { APY.set('s1r16c1',Formula.IF(Formula.AND(RANGE([1,2,1])>=75,RANGE([1,2,1])<=79),3*RANGE([1,20,0]),0)) }
+    APY.formulas.s1r16c2 = function() { APY.set('s1r16c2',Formula.IF(Formula.AND(RANGE([1,3,1])>=75,RANGE([1,3,1])<=79),2*RANGE([1,22,1]),0)) }
+    APY.formulas.s1r16c3 = function() { APY.set('s1r16c3',Formula.IF(Formula.AND(RANGE([1,4,1])==94),1.05*RANGE([1,22,2]),0)) }
+    APY.formulas.s1r16c4 = function() { APY.set('s1r16c4',Formula.IF(RANGE([1,5,1])=="yes",RANGE([1,19,3])*1,0)) }
+    APY.formulas.s1r16c5 = function() { APY.set('s1r16c5',Formula.IF(RANGE([1,6,1])=="T bow",RANGE([1,18,4])*1,0)) }
+    APY.formulas.s1r16c6 = function() { APY.set('s1r16c6',Formula.IF(RANGE([1,7,1])=="Kodai",RANGE([1,19,5])*1,0)) }
+    APY.formulas.s1r16c7 = function() { APY.set('s1r16c7',Formula.IF(RANGE([1,8,1])=="Rigour",RANGE([1,19,6])*1,0)) }
+    APY.formulas.s1r16c8 = function() { APY.set('s1r16c8',Formula.IF(RANGE([1,9,1])=="Anguish/Occult",RANGE([1,18,7])*1,0)) }
+    APY.formulas.s1r16c9 = function() { APY.set('s1r16c9',Formula.IF(Formula.AND(RANGE([1,1,3])=="Arma"),1*RANGE([1,18,8]),0)) }
+    APY.formulas.s1r16c10 = function() { APY.set('s1r16c10',Formula.IF(Formula.AND(RANGE([1,2,3])=="Ancestral"),1*RANGE([1,26,9]),0)) }
+    APY.formulas.s1r16c11 = function() { APY.set('s1r16c11',Formula.IF(RANGE([1,3,3])=="Ely (Twisted Bow)",1*RANGE([1,26,10]),0)) }
+    APY.formulas.s1r16c12 = function() { APY.set('s1r16c12',Formula.IF(RANGE([1,4,3])=="Pegasian",1*RANGE([1,27,11]),0)) }
+    APY.formulas.s1r16c13 = function() { APY.set('s1r16c13',Formula.IF(RANGE([1,5,3])=="Dragon",1*RANGE([1,21,12]),0)) }
+    APY.formulas.s1r16c14 = function() { APY.set('s1r16c14',Formula.IF(RANGE([1,6,3])=="USA",1*RANGE([1,19,13]),0)) }
+    APY.formulas.s1r16c15 = function() { APY.set('s1r16c15',Formula.IF(Formula.AND(RANGE([1,7,3])=="5 to 9",RANGE([1,6,3])=="USA"),1.5*RANGE([1,20,14]),0)) }
+    APY.formulas.s1r17c0 = function() { APY.set('s1r17c0',Formula.IF(Formula.AND(RANGE([1,1,1])>=40,RANGE([1,1,1])<=69),300,0)) }
+    APY.formulas.s1r17c1 = function() { APY.set('s1r17c1',Formula.IF(Formula.AND(RANGE([1,2,1])>=80,RANGE([1,2,1])<=84),2.5*RANGE([1,20,0]),0)) }
+    APY.formulas.s1r17c2 = function() { APY.set('s1r17c2',Formula.IF(Formula.AND(RANGE([1,3,1])>=80,RANGE([1,3,1])<=84),1.5*RANGE([1,22,1]),0)) }
+    APY.formulas.s1r17c3 = function() { APY.set('s1r17c3',Formula.IF(Formula.AND(RANGE([1,4,1])>=95,RANGE([1,4,1])<=97),1.015*RANGE([1,22,2]),0)) }
+    APY.formulas.s1r17c4 = function() { APY.set('s1r17c4',Formula.IF(RANGE([1,5,1])=="no",RANGE([1,19,3])*1.1,0)) }
+    APY.formulas.s1r17c5 = function() { APY.set('s1r17c5',Formula.IF(RANGE([1,6,1])=="ACB",RANGE([1,18,4])*1.7,0)) }
+    APY.formulas.s1r17c6 = function() { APY.set('s1r17c6',Formula.IF(RANGE([1,7,1])=="Master",RANGE([1,19,5])*1.05,0)) }
+    APY.formulas.s1r17c7 = function() { APY.set('s1r17c7',Formula.IF(RANGE([1,8,1])=="Eagle Eye",RANGE([1,19,6])*1.2,0)) }
+    APY.formulas.s1r17c8 = function() { APY.set('s1r17c8',Formula.IF(RANGE([1,9,1])=="Fury (Iron man)",RANGE([1,18,7])*1.1,0)) }
+    APY.formulas.s1r17c9 = function() { APY.set('s1r17c9',Formula.IF(Formula.AND(RANGE([1,1,3])=="Karils",RANGE([1,1,1])>=70),1.05*RANGE([1,18,8]),0)) }
+    APY.formulas.s1r17c10 = function() { APY.set('s1r17c10',Formula.IF(Formula.AND(RANGE([1,2,3])=="Ahrims",RANGE([1,1,1])>=70),1.02*RANGE([1,26,9]),0)) }
+    APY.formulas.s1r17c11 = function() { APY.set('s1r17c11',Formula.IF(RANGE([1,3,3])=="Arcane (Twisted Bow)",1*RANGE([1,26,10]),0)) }
+    APY.formulas.s1r17c12 = function() { APY.set('s1r17c12',Formula.IF(Formula.AND(RANGE([1,4,3])=="Ranger",RANGE([1,1,1])<=74),1*RANGE([1,27,11]),0)) }
+    APY.formulas.s1r17c13 = function() { APY.set('s1r17c13',Formula.IF(RANGE([1,5,3])=="Rune (Iron Man)",1.1*RANGE([1,21,12]),0)) }
+    APY.formulas.s1r17c14 = function() { APY.set('s1r17c14',Formula.IF(RANGE([1,6,3])=="EU",1.25*RANGE([1,19,13]),0)) }
+    APY.formulas.s1r17c15 = function() { APY.set('s1r17c15',Formula.IF(Formula.AND(RANGE([1,7,3])=="10 to 14",RANGE([1,6,3])=="USA"),1.075*RANGE([1,20,14]),0)) }
+    APY.formulas.s1r18c0 = function() { APY.set('s1r18c0',Formula.IF(Formula.AND(RANGE([1,1,1])>=70,RANGE([1,1,1])<=74),200,0)) }
+    APY.formulas.s1r18c1 = function() { APY.set('s1r18c1',Formula.IF(Formula.AND(RANGE([1,2,1])>=85,RANGE([1,2,1])<=89),2*RANGE([1,20,0]),0)) }
+    APY.formulas.s1r18c2 = function() { APY.set('s1r18c2',Formula.IF(Formula.AND(RANGE([1,3,1])>=85,RANGE([1,3,1])<=89),1.25*RANGE([1,22,1]),0)) }
+    APY.formulas.s1r18c3 = function() { APY.set('s1r18c3',Formula.IF(Formula.AND(RANGE([1,4,1])>=98,RANGE([1,4,1])<=99),1*RANGE([1,22,2]),0)) }
+    APY.formulas.s1r18c4 = function() { APY.set('s1r18c4',Formula.SUM(RANGE([1,16,4],[1,17,4]))) }
+    APY.formulas.s1r18c5 = function() { APY.set('s1r18c5',Formula.IF(RANGE([1,6,1])=="Rune Cbow",RANGE([1,18,4])*2.25,0)) }
+    APY.formulas.s1r18c6 = function() { APY.set('s1r18c6',Formula.IF(RANGE([1,7,1])=="Ancient",RANGE([1,19,5])*1.1,0)) }
+    APY.formulas.s1r18c7 = function() { APY.set('s1r18c7',Formula.SUM(RANGE([1,16,7],[1,17,7]))) }
+    APY.formulas.s1r18c8 = function() { APY.set('s1r18c8',Formula.SUM(RANGE([1,16,8],[1,17,8]))) }
+    APY.formulas.s1r18c9 = function() { APY.set('s1r18c9',Formula.IF(Formula.AND(RANGE([1,1,3])=="Karils",RANGE([1,1,1])<=69),1*RANGE([1,18,8]),0)) }
+    APY.formulas.s1r18c10 = function() { APY.set('s1r18c10',Formula.IF(Formula.AND(RANGE([1,2,3])=="Ahrims",RANGE([1,1,1])<=69),1*RANGE([1,26,9]),0)) }
+    APY.formulas.s1r18c11 = function() { APY.set('s1r18c11',Formula.IF(RANGE([1,3,3])=="Dragonfire Ward (ACB)",1*RANGE([1,26,10]),0)) }
+    APY.formulas.s1r18c12 = function() { APY.set('s1r18c12',Formula.IF(Formula.AND(RANGE([1,4,3])=="Ranger",RANGE([1,1,1])>=75),1.05*RANGE([1,27,11]),0)) }
+    APY.formulas.s1r18c13 = function() { APY.set('s1r18c13',Formula.IF(RANGE([1,5,3])=="Adamant (Iron Man)",1.15*RANGE([1,21,12]),0)) }
+    APY.formulas.s1r18c14 = function() { APY.set('s1r18c14',Formula.IF(RANGE([1,6,3])=="AUS / NZ",1.5*RANGE([1,19,13]),0)) }
+    APY.formulas.s1r18c15 = function() { APY.set('s1r18c15',Formula.IF(Formula.AND(RANGE([1,7,3])=="15 to 20",RANGE([1,6,3])=="USA"),1.05*RANGE([1,20,14]),0)) }
+    APY.formulas.s1r19c0 = function() { APY.set('s1r19c0',Formula.IF(Formula.AND(RANGE([1,1,1])>=75,RANGE([1,1,1])<=99),180,0)) }
+    APY.formulas.s1r19c1 = function() { APY.set('s1r19c1',Formula.IF(Formula.AND(RANGE([1,2,1])>=90,RANGE([1,2,1])<=94),1.3*RANGE([1,20,0]),0)) }
+    APY.formulas.s1r19c2 = function() { APY.set('s1r19c2',Formula.IF(Formula.AND(RANGE([1,3,1])>=90,RANGE([1,3,1])<=94),1.15*RANGE([1,22,1]),0)) }
+    APY.formulas.s1r19c3 = function() { APY.set('s1r19c3',Formula.SUM(RANGE([1,16,3],[1,18,3]))) }
+    APY.formulas.s1r19c5 = function() { APY.set('s1r19c5',Formula.SUM(RANGE([1,16,5],[1,18,5]))) }
+    APY.formulas.s1r19c6 = function() { APY.set('s1r19c6',Formula.SUM(RANGE([1,16,6],[1,18,6]))) }
+    APY.formulas.s1r19c9 = function() { APY.set('s1r19c9',Formula.IF(Formula.AND(RANGE([1,1,3])=="3rd Age Range",RANGE([1,1,1])<=69,RANGE([1,1,1])>=1),1*RANGE([1,18,8]),0)) }
+    APY.formulas.s1r19c10 = function() { APY.set('s1r19c10',Formula.IF(Formula.AND(RANGE([1,2,3])=="3rd Age Mage",RANGE([1,1,1])<=69,RANGE([1,1,1])>=1),1*RANGE([1,26,9]),0)) }
+    APY.formulas.s1r19c11 = function() { APY.set('s1r19c11',Formula.IF(RANGE([1,3,3])=="Odium Ward (ACB)",1.02*RANGE([1,26,10]),0)) }
+    APY.formulas.s1r19c12 = function() { APY.set('s1r19c12',Formula.IF(Formula.AND(RANGE([1,4,3])=="Blessed",RANGE([1,1,1])<=74),1*RANGE([1,27,11]),0)) }
+    APY.formulas.s1r19c13 = function() { APY.set('s1r19c13',Formula.SUM(RANGE([1,16,13],[1,18,13]))) }
+    APY.formulas.s1r19c14 = function() { APY.set('s1r19c14',Formula.IF(RANGE([1,6,3])=="Other",2*RANGE([1,19,13]),0)) }
+    APY.formulas.s1r19c15 = function() { APY.set('s1r19c15',Formula.IF(Formula.AND(RANGE([1,7,3])=="21 to 30",RANGE([1,6,3])=="USA"),1*RANGE([1,20,14]),0)) }
+    APY.formulas.s1r20c0 = function() { APY.set('s1r20c0',Formula.SUM(RANGE([1,16,0],[1,19,0]))) }
+    APY.formulas.s1r20c1 = function() { APY.set('s1r20c1',Formula.IF(Formula.AND(RANGE([1,2,1])>=95,RANGE([1,2,1])<=98),1.1*RANGE([1,20,0]),0)) }
+    APY.formulas.s1r20c2 = function() { APY.set('s1r20c2',Formula.IF(Formula.AND(RANGE([1,3,1])>=95,RANGE([1,3,1])<=98),1.05*RANGE([1,22,1]),0)) }
+    APY.formulas.s1r20c9 = function() { APY.set('s1r20c9',Formula.IF(Formula.AND(RANGE([1,1,3])=="3rd Age Range",RANGE([1,1,1])>=70),1.075*RANGE([1,18,8]),0)) }
+    APY.formulas.s1r20c10 = function() { APY.set('s1r20c10',Formula.IF(Formula.AND(RANGE([1,2,3])=="3rd Age Mage",RANGE([1,1,1])>=70),1.025*RANGE([1,26,9]),0)) }
+    APY.formulas.s1r20c11 = function() { APY.set('s1r20c11',Formula.IF(RANGE([1,3,3])=="Blessed Spirit Shield (Twisted Bow)",1.02*RANGE([1,26,10]),0)) }
+    APY.formulas.s1r20c12 = function() { APY.set('s1r20c12',Formula.IF(Formula.AND(RANGE([1,4,3])=="Blessed",RANGE([1,1,1])>=75),1.06*RANGE([1,27,11]),0)) }
+    APY.formulas.s1r20c14 = function() { APY.set('s1r20c14',Formula.SUM(RANGE([1,16,14],[1,19,14]))) }
+    APY.formulas.s1r20c15 = function() { APY.set('s1r20c15',Formula.IF(Formula.AND(RANGE([1,7,3])=="31 +",RANGE([1,6,3])=="USA"),1*RANGE([1,20,14]),0)) }
+    APY.formulas.s1r21c1 = function() { APY.set('s1r21c1',Formula.IF(Formula.AND(RANGE([1,2,1])>=99),1*RANGE([1,20,0]),0)) }
+    APY.formulas.s1r21c2 = function() { APY.set('s1r21c2',Formula.IF(Formula.AND(RANGE([1,3,1])==99),1*RANGE([1,22,1]),0)) }
+    APY.formulas.s1r21c9 = function() { APY.set('s1r21c9',Formula.IF(Formula.AND(RANGE([1,1,3])=="Blessed",RANGE([1,1,1])>=70),1.08*RANGE([1,18,8]),0)) }
+    APY.formulas.s1r21c10 = function() { APY.set('s1r21c10',Formula.IF(Formula.AND(RANGE([1,2,3])=="Infinity",RANGE([1,1,1])>=70),1.03*RANGE([1,26,9]),0)) }
+    APY.formulas.s1r21c11 = function() { APY.set('s1r21c11',Formula.IF(Formula.AND(RANGE([1,3,3])=="Mages Book (Twisted Bow)",RANGE([1,1,1])>=70),1.02*RANGE([1,26,10]),0)) }
+    APY.formulas.s1r21c12 = function() { APY.set('s1r21c12',Formula.SUM(RANGE([1,16,12],[1,20,12]))) }
+    APY.formulas.s1r21c15 = function() { APY.set('s1r21c15',Formula.IF(Formula.AND(RANGE([1,7,3])=="5 to 9",RANGE([1,6,3])=="EU"),RANGE([1,20,14])*0,0)) }
+    APY.formulas.s1r22c1 = function() { APY.set('s1r22c1',Formula.SUM(RANGE([1,16,1],[1,21,1]))) }
+    APY.formulas.s1r22c2 = function() { APY.set('s1r22c2',Formula.SUM(RANGE([1,16,2],[1,21,2]))) }
+    APY.formulas.s1r22c9 = function() { APY.set('s1r22c9',Formula.IF(Formula.AND(RANGE([1,1,3])=="Blessed",RANGE([1,1,1])>=40,RANGE([1,1,1])<=69),1.01*RANGE([1,18,8]),0)) }
+    APY.formulas.s1r22c10 = function() { APY.set('s1r22c10',Formula.IF(Formula.AND(RANGE([1,2,3])=="Infinity",RANGE([1,1,1])>=40,RANGE([1,1,1])<=69),1.01*RANGE([1,26,9]),0)) }
+    APY.formulas.s1r22c11 = function() { APY.set('s1r22c11',Formula.IF(Formula.AND(RANGE([1,3,3])=="Unholy Book (ACB)",RANGE([1,1,1])>=70),1.02*RANGE([1,26,10]),0)) }
+    APY.formulas.s1r22c15 = function() { APY.set('s1r22c15',Formula.IF(Formula.AND(RANGE([1,7,3])=="10 to 14",RANGE([1,6,3])=="EU"),0*RANGE([1,20,14]),0)) }
+    APY.formulas.s1r23c9 = function() { APY.set('s1r23c9',Formula.IF(Formula.AND(RANGE([1,1,3])=="Blessed",RANGE([1,1,1])>=1,RANGE([1,1,1])<=39),1*RANGE([1,18,8]),0)) }
+    APY.formulas.s1r23c10 = function() { APY.set('s1r23c10',Formula.IF(Formula.AND(RANGE([1,2,3])=="Infinity",RANGE([1,1,1])>=1,RANGE([1,1,1])<=39),1*RANGE([1,26,9]),0)) }
+    APY.formulas.s1r23c11 = function() { APY.set('s1r23c11',Formula.IF(Formula.AND(RANGE([1,3,3])=="Book of Darkness (Twisted Bow)",RANGE([1,1,1])>=70),1.02*RANGE([1,26,10]),0)) }
+    APY.formulas.s1r23c15 = function() { APY.set('s1r23c15',Formula.IF(Formula.AND(RANGE([1,7,3])=="15 to 20",RANGE([1,6,3])=="EU"),RANGE([1,20,14])*1.25,0)) }
+    APY.formulas.s1r24c9 = function() { APY.set('s1r24c9',Formula.IF(Formula.AND(RANGE([1,1,3])=="1 Def Gear",RANGE([1,1,1])>=1,RANGE([1,1,1])<=39),1*RANGE([1,18,8]),0)) }
+    APY.formulas.s1r24c10 = function() { APY.set('s1r24c10',Formula.IF(Formula.AND(RANGE([1,2,3])=="1 Def Gear",RANGE([1,1,1])>=1,RANGE([1,1,1])<=39),1*RANGE([1,26,9]),0)) }
+    APY.formulas.s1r24c11 = function() { APY.set('s1r24c11',Formula.IF(Formula.AND(RANGE([1,3,3])=="Mages Book (Twisted Bow)",RANGE([1,1,1])<=69),1*RANGE([1,26,10]),0)) }
+    APY.formulas.s1r24c15 = function() { APY.set('s1r24c15',Formula.IF(Formula.AND(RANGE([1,7,3])=="21 to 30",RANGE([1,6,3])=="EU"),1.15*RANGE([1,20,14]),0)) }
+    APY.formulas.s1r25c9 = function() { APY.set('s1r25c9',Formula.IF(Formula.AND(RANGE([1,1,3])=="1 Def Gear",RANGE([1,1,1])>=40),2.5*RANGE([1,18,8]),0)) }
+    APY.formulas.s1r25c10 = function() { APY.set('s1r25c10',Formula.IF(Formula.AND(RANGE([1,2,3])=="1 Def Gear",RANGE([1,1,1])>=40),2*RANGE([1,26,9]),0)) }
+    APY.formulas.s1r25c11 = function() { APY.set('s1r25c11',Formula.IF(Formula.AND(RANGE([1,3,3])=="Unholy Book (ACB)",RANGE([1,1,1])<=69),1*RANGE([1,26,10]),0)) }
+    APY.formulas.s1r25c15 = function() { APY.set('s1r25c15',Formula.IF(Formula.AND(RANGE([1,7,3])=="31 +",RANGE([1,6,3])=="EU"),1*RANGE([1,20,14]),0)) }
+    APY.formulas.s1r26c9 = function() { APY.set('s1r26c9',Formula.SUM(RANGE([1,16,9],[1,25,9]))) }
+    APY.formulas.s1r26c10 = function() { APY.set('s1r26c10',Formula.SUM(RANGE([1,16,10],[1,25,10]))) }
+    APY.formulas.s1r26c11 = function() { APY.set('s1r26c11',Formula.IF(Formula.AND(RANGE([1,3,3])=="Book of Darkness (Twisted Bow)",RANGE([1,1,1])<=69),1*RANGE([1,26,10]),0)) }
+    APY.formulas.s1r26c15 = function() { APY.set('s1r26c15',Formula.IF(Formula.AND(RANGE([1,7,3])=="5 to 9",RANGE([1,6,3])=="AUS / NZ"),RANGE([1,20,14])*0,0)) }
+    APY.formulas.s1r27c11 = function() { APY.set('s1r27c11',Formula.SUM(RANGE([1,16,11],[1,26,11]))) }
+    APY.formulas.s1r27c15 = function() { APY.set('s1r27c15',Formula.IF(Formula.AND(RANGE([1,7,3])=="10 to 14",RANGE([1,6,3])=="AUS / NZ"),0*RANGE([1,20,14]),0)) }
+    APY.formulas.s1r28c15 = function() { APY.set('s1r28c15',Formula.IF(Formula.AND(RANGE([1,7,3])=="15 to 20",RANGE([1,6,3])=="AUS / NZ"),RANGE([1,20,14])*0,0)) }
+    APY.formulas.s1r29c15 = function() { APY.set('s1r29c15',Formula.IF(Formula.AND(RANGE([1,7,3])=="21 to 30",RANGE([1,6,3])=="AUS / NZ"),1.3*RANGE([1,20,14]),0)) }
+    APY.formulas.s1r30c15 = function() { APY.set('s1r30c15',Formula.IF(Formula.AND(RANGE([1,7,3])=="31 +",RANGE([1,6,3])=="AUS / NZ"),1.2*RANGE([1,20,14]),0)) }
+    APY.formulas.s1r31c15 = function() { APY.set('s1r31c15',Formula.IF(Formula.AND(RANGE([1,7,3])=="5 to 9",RANGE([1,6,3])=="Other"),RANGE([1,20,14])*0,0)) }
+    APY.formulas.s1r32c15 = function() { APY.set('s1r32c15',Formula.IF(Formula.AND(RANGE([1,7,3])=="10 to 14",RANGE([1,6,3])=="Other"),0*RANGE([1,20,14]),0)) }
+    APY.formulas.s1r33c15 = function() { APY.set('s1r33c15',Formula.IF(Formula.AND(RANGE([1,7,3])=="15 to 20",RANGE([1,6,3])=="Other"),RANGE([1,20,14])*0,0)) }
+    APY.formulas.s1r34c15 = function() { APY.set('s1r34c15',Formula.IF(Formula.AND(RANGE([1,7,3])=="21 to 30",RANGE([1,6,3])=="Other"),0*RANGE([1,20,14]),0)) }
+    APY.formulas.s1r35c15 = function() { APY.set('s1r35c15',Formula.IF(Formula.AND(RANGE([1,7,3])=="31 +",RANGE([1,6,3])=="Other"),1.5*RANGE([1,20,14]),0)) }
+    APY.formulas.s1r36c15 = function() { APY.set('s1r36c15',Formula.SUM(RANGE([1,16,15],[1,35,15]))) }
+    function step0() {
+    APY.formulas.s1r1c1();APY.formulas.s1r1c3();APY.formulas.s1r2c1();APY.formulas.s1r2c3();APY.formulas.s1r3c1();APY.formulas.s1r3c3();APY.formulas.s1r4c1();APY.formulas.s1r4c3();APY.formulas.s1r5c1();APY.formulas.s1r5c3();APY.formulas.s1r6c1();APY.formulas.s1r6c3();APY.formulas.s1r7c1();APY.formulas.s1r7c3();APY.formulas.s1r8c1();APY.formulas.s1r9c1();
+    }
+    function step1() {
+    APY.formulas.s1r16c0();APY.formulas.s1r17c0();APY.formulas.s1r18c0();APY.formulas.s1r19c0();
+    }
+    function step2() {
+    APY.formulas.s1r20c0();
+    }
+    function step3() {
+    APY.formulas.s1r16c1();APY.formulas.s1r17c1();APY.formulas.s1r18c1();APY.formulas.s1r19c1();APY.formulas.s1r20c1();APY.formulas.s1r21c1();
+    }
+    function step4() {
+    APY.formulas.s1r22c1();
+    }
+    function step5() {
+    APY.formulas.s1r16c2();APY.formulas.s1r17c2();APY.formulas.s1r18c2();APY.formulas.s1r19c2();APY.formulas.s1r20c2();APY.formulas.s1r21c2();
+    }
+    function step6() {
+    APY.formulas.s1r22c2();
+    }
+    function step7() {
+    APY.formulas.s1r16c3();APY.formulas.s1r17c3();APY.formulas.s1r18c3();
+    }
+    function step8() {
+    APY.formulas.s1r19c3();
+    }
+    function step9() {
+    APY.formulas.s1r16c4();APY.formulas.s1r17c4();
+    }
+    function step10() {
+    APY.formulas.s1r18c4();
+    }
+    function step11() {
+    APY.formulas.s1r16c5();APY.formulas.s1r17c5();APY.formulas.s1r18c5();
+    }
+    function step12() {
+    APY.formulas.s1r19c5();
+    }
+    function step13() {
+    APY.formulas.s1r16c6();APY.formulas.s1r17c6();APY.formulas.s1r18c6();
+    }
+    function step14() {
+    APY.formulas.s1r19c6();
+    }
+    function step15() {
+    APY.formulas.s1r16c7();APY.formulas.s1r17c7();
+    }
+    function step16() {
+    APY.formulas.s1r18c7();
+    }
+    function step17() {
+    APY.formulas.s1r16c8();APY.formulas.s1r17c8();
+    }
+    function step18() {
+    APY.formulas.s1r18c8();
+    }
+    function step19() {
+    APY.formulas.s1r16c9();APY.formulas.s1r17c9();APY.formulas.s1r18c9();APY.formulas.s1r19c9();APY.formulas.s1r20c9();APY.formulas.s1r21c9();APY.formulas.s1r22c9();APY.formulas.s1r23c9();APY.formulas.s1r24c9();APY.formulas.s1r25c9();
+    }
+    function step20() {
+    APY.formulas.s1r26c9();
+    }
+    function step21() {
+    APY.formulas.s1r16c10();APY.formulas.s1r17c10();APY.formulas.s1r18c10();APY.formulas.s1r19c10();APY.formulas.s1r20c10();APY.formulas.s1r21c10();APY.formulas.s1r22c10();APY.formulas.s1r23c10();APY.formulas.s1r24c10();APY.formulas.s1r25c10();
+    }
+    function step22() {
+    APY.formulas.s1r26c10();
+    }
+    function step23() {
+    APY.formulas.s1r16c11();APY.formulas.s1r17c11();APY.formulas.s1r18c11();APY.formulas.s1r19c11();APY.formulas.s1r20c11();APY.formulas.s1r21c11();APY.formulas.s1r22c11();APY.formulas.s1r23c11();APY.formulas.s1r24c11();APY.formulas.s1r25c11();APY.formulas.s1r26c11();
+    }
+    function step24() {
+    APY.formulas.s1r27c11();
+    }
+    function step25() {
+    APY.formulas.s1r16c12();APY.formulas.s1r17c12();APY.formulas.s1r18c12();APY.formulas.s1r19c12();APY.formulas.s1r20c12();
+    }
+    function step26() {
+    APY.formulas.s1r21c12();
+    }
+    function step27() {
+    APY.formulas.s1r16c13();APY.formulas.s1r17c13();APY.formulas.s1r18c13();
+    }
+    function step28() {
+    APY.formulas.s1r19c13();
+    }
+    function step29() {
+    APY.formulas.s1r16c14();APY.formulas.s1r17c14();APY.formulas.s1r18c14();APY.formulas.s1r19c14();
+    }
+    function step30() {
+    APY.formulas.s1r20c14();
+    }
+    function step31() {
+    APY.formulas.s1r16c15();APY.formulas.s1r17c15();APY.formulas.s1r18c15();APY.formulas.s1r19c15();APY.formulas.s1r20c15();APY.formulas.s1r21c15();APY.formulas.s1r22c15();APY.formulas.s1r23c15();APY.formulas.s1r24c15();APY.formulas.s1r25c15();APY.formulas.s1r26c15();APY.formulas.s1r27c15();APY.formulas.s1r28c15();APY.formulas.s1r29c15();APY.formulas.s1r30c15();APY.formulas.s1r31c15();APY.formulas.s1r32c15();APY.formulas.s1r33c15();APY.formulas.s1r34c15();APY.formulas.s1r35c15();
+    }
+    function step32() {
+    APY.formulas.s1r36c15();
+    }
+    function step33() {
+    APY.formulas.s0r11c1();APY.formulas.s1r11c1();
+    }
+    function step34() {
+    APY.formulas.s0r12c1();APY.formulas.s1r12c1();
+    }
+    function run_calc(){ step0();step1();step2();step3();step4();step5();step6();step7();step8();step9();step10();step11();step12();step13();step14();step15();step16();step17();step18();step19();step20();step21();step22();step23();step24();step25();step26();step27();step28();step29();step30();step31();step32();step33();step34()}
+    window.onload = function () {
+        $('input, select, textarea').on('change', function () {
+            $(this).setFormattedValue();
+            run_calc();
+        });
+
+        $('input:enabled, select, textarea').each(function () {
+            $(this).setFormattedValue();
+        });
+
+        run_calc();
+    };
+
+    $.fn.setFormattedValue = function () {
+        var valueType = $(this).attr('data-value-type');
+        var valueFormat = $(this).attr('data-format');
+
+        var value = APY.getInput($(this).val(), valueType);
+        var formattedValue = APY.formatValue(value, valueType, valueFormat);
+
+        this.attr('data-value', value);
+        this.val(formattedValue);
+    };
+
+    APY.getInput = function (rawInputValue, type) {
+        var returnedValue;
+
+        if (typeof type === 'undefined') type = 'string';
+
+        if (type === 'boolean') {
+            returnedValue = (rawInputValue === 'true');
+        } else if (type === 'float' || type === 'number') {
+            if (rawInputValue.length > 0) {
+                returnedValue = parseFloat(rawInputValue);
+            } else {
+                returnedValue = 0;
+            }
+        } else if (type === 'percentage' || type === 'currency') {
+            if (rawInputValue.length > 0) {
+                returnedValue = numeral().unformat(rawInputValue);
+            } else {
+                returnedValue = 0;
+            }
+        } else {
+            returnedValue = rawInputValue;
+        }
+
+        return returnedValue;
+    };
+
+    APY.set = function (outputName, value, type) {
+        if (typeof type === 'undefined') {
+            type = (typeof value === 'undefined') ? 'string' : typeof value;
+        }
+        var element = $('[name=' + outputName + ']');
+
+        var format = $(element).data('format');
+        var myFormat;
+        var displayedValue;
+
+        if ((type === 'number' || type === 'float' || type === 'percentage' || type === 'currency') &&
+            (typeof format !== "undefined")) {
+
+            var formatParts = format.toString().split(";", 3);
+            var formatPartsNumber = formatParts.length;
+            if (value === 0 && formatPartsNumber === 3) {
+                myFormat = formatParts[1];
+            } else if (value < 0) {
+                myFormat = formatParts[0];
+            } else {
+                myFormat = formatParts[formatPartsNumber - 1];
+            }
+
+            displayedValue = numeral(value).format(myFormat);
+        } else {
+            displayedValue = value;
+        }
+
+        if (window.APY.cells && window.APY.cells.hasOwnProperty(outputName)) {
+            window.APY.cells[outputName] = {
+                value: value,
+                type: type,
+                displayedValue: displayedValue
+            }
+        } else {
+            element.attr('data-value-type', type);
+            element.attr('data-value', value);
+            element.val(displayedValue);
+        }
+    };
+
+    APY.formatValue = function (value, type, formats) {
+        var myFormat;
+        var formattedValue = value;
+
+        if ((type === 'number' || type === 'float' || type === 'percentage' || type === 'currency') &&
+            (typeof formats !== 'undefined')) {
+
+            var formatsParts = formats.toString().split(";", 3);
+            var formatPartsNumber = formatsParts.length;
+            if (value === 0 && formatPartsNumber === 3) {
+                myFormat = formatsParts[1];
+            } else if (value < 0) {
+                myFormat = formatsParts[0];
+            } else {
+                myFormat = formatsParts[formatPartsNumber - 1];
+            }
+
+            formattedValue = numeral(value).format(myFormat);
+        }
+
+        return formattedValue;
+    };
+
+    window.RANGE = function () {
+        var item, value;
+        if (arguments.length === 1) {
+            var cellId = 's' + arguments[0][0] + 'r' + arguments[0][1] + 'c' + arguments[0][2];
+
+            if (window.APY.cells && window.APY.cells.hasOwnProperty(cellId)) {
+                value = APY.cells[cellId].value;
+            } else {
+                item = $('[name=' + cellId + ']');
+                value = item.length > 0 ? APY.getInput(item.attr('data-value'), item.attr('data-value-type')) : null;
+            }
+
+            return value;
+
+        } else if (arguments.length === 2) {
+            var head = arguments[0];
+            var tail = arguments[1];
+            var values = [];
+
+            for (var i = 0; i <= (tail[1] - head[1]); i++) {
+                var row = [];
+                for (var j = 0; j <= tail[2] - head[2]; j++) {
+                    cellId = 's' + head[0] + 'r' + (head[1] + i) + 'c' + (head[2] + j);
+
+                    if (window.APY.cells && window.APY.cells.hasOwnProperty(cellId)) {
+                        value = APY.cells[cellId].value;
+                    } else {
+                        item = $('[name=' + cellId + ']');
+                        value = item.length > 0 ? APY.getInput(item.attr('data-value'), item.attr('data-value-type')) : null;
+                    }
+                    row.push(value);
+                }
+                values.push(row);
+            }
+            return values;
+        }
+    };
+
+    APY.calculate = run_calc;
+
+        })(jQuery, formulajs);
+    </script><script type="text/javascript">
+$(document).ready(function () {
+        $(".tabs-list a").click(function (event) {
+
+            event.preventDefault();
+            $(this).parent().addClass("active");
+            $(this).parent().siblings().removeClass("active");
+
+            var tab = $(this).attr("href");
+            $(".tab-content").not(tab).css("display", "none");
+            $(tab).fadeIn();
+        });
+    });
+    </script>
+  </body>
+</html>
